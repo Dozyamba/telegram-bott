@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram Бот</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #1d2b64, #f8cdda);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .btn {
+      margin: 10px;
+      padding: 18px 40px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 90%;
+      max-width: 320px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .btn:active::after {
+      opacity: 1;
+      box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.6);
+    }
+
+    .purple { background-color: #7f3deb; }
+    .orange { background-color: #ff6a00; }
+    .pink { background-color: #f94ca4; }
+    .green { background-color: #28c76f; }
+
+    @media (max-width: 480px) {
+      .btn {
+        font-size: 1rem;
+        padding: 16px 24px;
+      }
+    }
+
+    h1 {
+      color: white;
+      font-size: 1rem;
+      background-color: rgba(255, 165, 0, 0.8);
+      padding: 8px 16px;
+      border-radius: 16px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CHANNEL</h1>
+
+  <button class="btn purple" onclick="goToTelegram()">ИНФОГРАФИКА</button>
+  <button class="btn orange" onclick="goToTelegram()">МОНТАЖ ВИДЕО</button>
+  <button class="btn pink" onclick="goToTelegram()">ДИЗАЙН</button>
+  <button class="btn green" onclick="goToTelegram()">NFT-АВАТАРЫ</button>
+  <button class="btn orange" onclick="goToTelegram()">ВЕБ-ПРИЛОЖЕНИЯ</button>
+  <button class="btn purple" onclick="goToTelegram()">КОПИРАЙТИНГ</button>
+
+  <script>
+    function goToTelegram() {
+      window.location.href = "https://t.me/hyted";
+    }
+  </script>
+</body>
+</html>
